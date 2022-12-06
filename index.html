@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonz.ai</title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logo" src="/assets/logo/bonz.ai-logo-black-landscape.png" alt="Bonz.ai logo">
+        <nav class="hamnav">
+            <label class="hamnav__label" for="hamburger">&#9776;</label>
+            <input class="hamnav__checkbox" type="checkbox" id="hamburger">
+            <ul class="hamitems">
+                <li><a class="hamitems__item" href="#">Home</a></li>
+                <li><a class="hamitems__item" href="#">About us</a></li>
+                <li><a class="hamitems__item" href="#">Booking</a></li>
+                <li><a class="hamitems__item" href="#">Contact</a></li>
+                <li><a class="hamitems__item hamitems__item--noborder" href="#">Gallery</a></li>
+            </ul>
+        </nav>
+        <section class="slogan">
+            <h1 class="slogan__text">A different way to stay.</h1>
+            <img class="slogan__logo" src="/assets/logo/bonz.ai-logo-black-portrait.png" alt="Bonz.ai logo">
+        </section>
+    </header>
+
+    <main>
+        <section class="avalibility-form">
+            <label class="avalibility-form--button" for="avalibility-form__button">Book now!</label>
+            <input class="avalibility-form__checkbox" type="checkbox" id="avalibility-form__button">
+            <ul class="checkitems">
+                <li class="checkitems__checked">
+                    <form class="check">
+                        <label class="check__label" for="check__in">Check-in</label>
+                        <input type="text" id="check__in" placeholder="-----Select check-in date-----" onfocus="(this.type='date')">
+                        <label class="check__label" for="check__out">Check-out</label>
+                        <input type="text" id="check__out" placeholder="-----Select check-out date-----" onfocus="(this.type='date')">
+                    </form>
+                    <form class="adult">
+                        <label class="check__label" for="adults__number">Select adults</label>
+                        <select name="" id="adult__number">
+                            <option value="">--Number of adults--</option>
+                            <option value="adult-1">1</option>
+                            <option value="adult-2">2</option>
+                            <option value="adult-3">3</option>
+                            <option value="adult-4">4</option>
+                            <option value="adult-5">5</option>
+                            <option value="adult-6">6</option>
+                        </select>
+                    
+                        <label class="check__label" for="children__number">Select children</label>
+                        <select name="" id="children__number">
+                            <option value="">--Number of children--</option>
+                            <option value="children-1">1</option>
+                            <option value="children-2">2</option>
+                            <option value="children-3">3</option>
+                            <option value="children-4">4</option>
+                            <option value="children-5">5</option>
+                            <option value="children-6">6</option>
+                        </select>
+                    </form>
+                    <button class="avalibility-form--btn">Check avalibility!</button>
+                </li>
+            </ul>    
+        </section>
+        <h1 class="main-header">Eco friendly</h1>
+        <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat totam unde corporis consectetur nihil, sed praesentium quisquam distinctio magnam voluptate neque consequuntur fugit sit odio, ea illum id natus perspiciatis!
+        </p>
+        <article class="info-cards">
+            <figure class="info-cards__card">
+                <img class="" src="/assets/photos/08-night.jpg" alt="hotel-room">
+                <h2>Header</h2>
+                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nihil quibusdam esse aut tenetur saepe possimus! Architecto quaerat odio exercitationem!</figcaption>
+            </figure>
+            <figure class="info-cards__card">
+                <img src="/assets/photos/03-night.jpg" alt="hotel-room">
+                <h2>Header</h2>
+                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nihil quibusdam esse aut tenetur saepe possimus! Architecto quaerat odio exercitationem!</figcaption>
+            </figure>
+            <figure class="info-cards__card">
+                <img src="/assets/photos/05-night.jpg" alt="hotel-room">
+                <h2>Header</h2>
+                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nihil quibusdam esse aut tenetur saepe possimus! Architecto quaerat odio exercitationem!</figcaption>
+            </figure>
+        </article>
+    </main>
+
+    <footer>
+        <section class="info">
+            <h2 class="info__header">Resort information</h2>
+            <ul class="info__list">
+                <li class="info__item">About us</li>
+                <li class="info__item">Transfers</li>
+                <li class="info__item">Our partners</li>
+                <li class="info__item">Gift Vouchers</li>
+                <li class="info__item">Sitemap</li>
+                <li class="info__item">Contact us</li>
+            </ul>
+        </section>
+
+        <section class="terms">
+            <h2 class="terms__header">Terms & conditions</h2>
+            <ul class="terms__list">
+                <li class="terms__item">Privacy policy</li>
+                <li class="terms__item">Bookings and cancellations</li>
+                <li class="terms__item">Website terms</li>
+            </ul>
+        </section>
+
+        <section class="resorts">
+            <h2 class="resorts__header">Bonz.ai's resorts</h2>
+            <ul class="resorts__list">
+                <li class="resorts__item">Bonz.ai</li>
+                <li class="resorts__item">Our resorts</li>
+                <li class="resorts__item">Private homes</li>
+                <li class="resorts__item">Media centre</li>
+                <li class="resorts__item">Awards</li>
+                <li class="resorts__item">Newsletters signup</li>
+            </ul>
+        </section>
+        <section class="footer-logo">
+            <img class="footer-logo__img" src="/assets/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai logo">
+        </section>
+    </footer>
+    
+</body>
+</html>
