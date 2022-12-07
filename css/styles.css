@@ -55,6 +55,10 @@ header {
 
 .hamitems {
     display: none;
+    margin-right: 15%;
+        margin-left: 8em;
+        margin-top: 0;
+        padding-top: 0.5em;
 }
 
 .hamitems__item {
@@ -269,9 +273,7 @@ footer {
     .hamitems {
         display: flex;
         justify-content: flex-end;
-        margin-right: 15%;
-        margin-top: 0;
-        padding-top: 0.5em;
+        flex-wrap: wrap;
        
     }
     
