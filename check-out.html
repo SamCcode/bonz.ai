@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check-out</title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="booking-header">
+        <img class="logo" src="/assets/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai logo">
+        <nav class="hamnav">
+            <label class="hamnav__label" for="hamburger">&#9776;</label>
+            <input class="hamnav__checkbox" type="checkbox" id="hamburger">
+            <ul class="hamitems">
+                <li><a class="hamitems__item" href="/index.html">Home</a></li>
+                <li><a class="hamitems__item" href="/about.html">About us</a></li>
+                <li><a class="hamitems__item" href="/booking.html">Booking</a></li>
+                <li><a class="hamitems__item" href="#">Contact</a></li>
+                <li><a class="hamitems__item hamitems__item--noborder" href="#">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="check-out-main">
+        <section class="your-details">
+            <h1 class="your-details__header">YOUR DETAILS</h1>
+            <ul class="your-details__list">
+                <li class="your-details__items">Date</li>
+                <li class="your-details__items">Number of nights</li>
+                <li class="your-details__items">Guests</li>
+                <li class="your-details__items">Room</li>
+                <li class="your-details__items">Total price</li>
+            </ul>
+            <ul class="your-details__list">
+                <li class="your-details__items">Tue Dec 20-Wed Dec 28</li>
+                <li class="your-details__items">2</li>
+                <li class="your-details__items">2 Adults, 1 Child</li>
+                <li class="your-details__items">Bonz,ai Superior King Room</li>
+                <li class="your-details__items">€1050</li>
+            </ul>
+        </section>
+        <form class="customerinfo">
+            <label class="customerinfo__label" for="customerinfo__title">Title*</label>
+            <select class="customerinfo__input" name="" id="customerinfo__title">
+                <option value="">--Choose title--</option>
+                <option value="mr">Mr</option>
+                <option value="ms">Mrs</option>
+                <option value="mr">Doctor</option>
+            </select>
+            <label class="customerinfo__label" for="customerinfo__country">Country*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__country" placeholder="Sweden">
+            <label class="customerinfo__label" for="customerinfo__firstname">Firstname*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__firstname" placeholder="Greta">
+            <label class="customerinfo__label"  for="customerinfo__state">State*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__state" placeholder="Västra Götaland">
+            <label class="customerinfo__label" for="customerinfo__lastname">Lastname*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__lastname" placeholder="Thunberg">
+            <label class="customerinfo__label" for="customerinfo__city">City*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__city" placeholder="Gothenburg">
+            <label class="customerinfo__label" for="customerinfo__email">Email*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__email" placeholder="Greta@hotmail.com">
+            <label class="customerinfo__label" for="customerinfo__adressone">Adress 1*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__adressone" placeholder="Lingonberga">
+            <label class="customerinfo__label" for="customerinfo__confirmemail">Confirm Email*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__confirmemail" placeholder="Greta@hotmail.com">
+            <label class="customerinfo__label" for="customerinfo__adresstwo">Adress 2*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__adresstwo" placeholder="nummer 56">
+            <label class="customerinfo__label" for="customerinfo__number">Telephone number*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__number" placeholder="031-666666">
+            <label class="customerinfo__label" for="customerinfo__post">Post Code*</label>
+            <input class="customerinfo__input" type="text" id="customerinfo__post" placeholder="65476">
+            <button class="customerinfo__button">Go to payment</button>
+        </form>
+        <aside class="check-outimg">
+            <img class="check-outimg__img" src="/assets/photos/02-night.jpg" alt="hotel room">
+            <img class="check-outimg__img" src="/assets/photos/05-night.jpg" alt="hotel room">
+        </aside>  
+    </main>
+    <footer>
+        <section class="footerinfo">
+            <h2 class="footerinfo__header">Resort information</h2>
+            <ul class="footerinfo__list">
+                <li class="footerinfo__item">About us</li>
+                <li class="footerinfo__item">Transfers</li>
+                <li class="footerinfo__item">Our partners</li>
+                <li class="footerinfo__item">Gift Vouchers</li>
+                <li class="footerinfo__item">Sitemap</li>
+                <li class="footerinfo__item">Contact us</li>
+            </ul>
+        </section>
+
+        <section class="footerinfo">
+            <h2 class="footerinfo__header">Terms & conditions</h2>
+            <ul class="footerinfo__list">
+                <li class="footerinfo__item">Privacy policy</li>
+                <li class="footerinfo__item">Bookings and cancellations</li>
+                <li class="footerinfo__item">Website terms</li>
+            </ul>
+        </section>
+
+        <section class="footerinfo">
+            <h2 class="footerinfo__header">Bonz.ai's resorts</h2>
+            <ul class="footerinfo__list">
+                <li class="footerinfo__item">Bonz.ai</li>
+                <li class="footerinfo__item">Our resorts</li>
+                <li class="footerinfo__item">Private homes</li>
+                <li class="footerinfo__item">Media centre</li>
+                <li class="footerinfo__item">Awards</li>
+                <li class="footerinfo__item">Newsletters signup</li>
+            </ul>
+        </section>
+        <section class="footerlogo">
+            <img class="footerlogo__img" src="/assets/logo/bonz.ai-logo-color-landscape.png" alt="Bonz.ai logo">
+        </section>
+    </footer>
+</body>
+</html>

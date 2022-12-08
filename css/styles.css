@@ -9,6 +9,7 @@
     --lightgreen:#53E9BC;
     --green:#20666F;
     --buttonyellow:#DBF6B0;
+    --backgroundblacktrans:rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -24,21 +25,18 @@ body {
     
 }
 
-
-
-/* ---- header styling ---*/
+/*---- MAIN STYLING (Index)----/*
+/* ---- headerstyling ---*/
 
 header {
    padding-bottom: 1em;
    background-image: url(/assets/photos/09-day.jpg);
    background-repeat: no-repeat;
    background-size: cover;
-   
-
 }
 
 .logo {
-    max-width: 9em;
+    max-width: 7em;
     position: absolute;
     top: 0.5em;
     left: 0.5em;
@@ -53,10 +51,18 @@ header {
     cursor: pointer;
 }
 
+.hamnav__checkbox:checked ~ .hamitems{
+    display: block;
+}
+
+#hamburger {
+    display: none;
+}
+
 .hamitems {
     display: none;
     margin-right: 15%;
-        margin-left: 8em;
+        margin-left: 6em;
         margin-top: 0;
         padding-top: 0.5em;
 }
@@ -64,12 +70,12 @@ header {
 .hamitems__item {
     display: block;
     width: 100%;
+    font-size: 0.7em;
     border-bottom:1px solid #333;
     text-align: center;
     color: black;
     padding: 0.4em;
     transition-duration: 0.4s;
-    
 }
 
 .hamitems__item:hover {
@@ -77,42 +83,20 @@ header {
     color: white;
 }
 
-#hamburger {
-    display: none;
-}
-
-.hamnav__checkbox:checked ~ .hamitems{
-display: block;
-}
-
-
 .slogan {
     margin-top: 6em;
     margin-bottom: 6em;
-    
+}
+
+.slogan__text {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .slogan__logo {
     max-width: 4em;
-    
 }
 
-/* ----main avalibility-form styling----*/
-
-#avalibility-form__button {
-    display: none;
-}
-
-.checkitems {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 0;
-}
-
-.avalibility-form__checkbox:checked ~ .checkitems {
-    display: block;
-    margin-bottom: -3.5em;
-}
+/* ----avalibility-form styling----*/
 
 .avalibility-form {
     margin-top: -8em;
@@ -123,13 +107,13 @@ display: block;
     flex-direction: column;
     align-items: center;
     font-size: 0.9em;
-    
 }
 
 .avalibility-form--button {
     color: black;
     background-color: rgba(0, 0, 0, 0.0);
     border: 2px solid;
+    font-weight: 700;
     margin-top: 3em;
     margin-bottom: -1em;
     border-radius: 4px;
@@ -141,12 +125,26 @@ display: block;
 .avalibility-form--button:hover {
     color: white;
 }
+#avalibility-form__button {
+    display: none;
+}
+
+.avalibility-form__checkbox:checked ~ .checkitems {
+    display: block;
+    margin-bottom: -3.5em;
+}
+
+.checkitems {
+    display: none;
+    background-color: var(--backgroundblacktrans);
+    width: 95%;
+    padding: 0;
+}
 
 .check, .adult, .children {
     display: flex;
     flex-direction: column;
     margin: 0.5em;
-    
 }
 
 .check__label {
@@ -160,7 +158,6 @@ display: block;
     border: 1px solid rgba(255, 255, 255, 0.418);
     padding: 0.4em;
     cursor: pointer;
-     
 }
 
 ::placeholder {
@@ -175,6 +172,7 @@ option {
     color: white;
     background-color: rgba(0, 0, 0, 0.0);
     border: 2px solid;
+    font-weight: 700;
     border-radius: 4px;
     padding: 1em;
     margin-bottom: 1em;
@@ -182,21 +180,27 @@ option {
     transition-duration: 2s;
 }
 
+.avalibility-form--link{
+    align-self: center;
+}
+
 .avalibility-form--btn:hover {
     background-color: rgba(255, 255, 255, 0.562);
     color: black;
     border: none;
 }
+
 /* ----main styling----*/
 
-
-.main-header, .main-text  {
+.main-header {
     color: white;
     margin: 2em;
     margin-bottom: 0;
-
+    text-shadow: 2px 4px 3px rgba(255, 255, 255, 0.3);
 }
-
+.main-text {
+    color: white;
+}
 
 .info-cards {
     display: flex;
@@ -205,29 +209,29 @@ option {
     align-items: center;
 }
 
-
 .info-cards__card {
     background-color: white;
     color: black;
-    max-width: 8em;
+    max-width: 9em;
     border-radius: 5px;
-    margin-top: 2em;
     font-family: 'Nanum Gothic', sans-serif;
-    
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(255, 255, 255, 0.22) 0px 15px 12px;
 }
 
-.info-cards__card img {
+.info-cards__img {
     max-width: 100%;
     border-radius: 5px 5px 0px 0px;
 }
 
-figcaption, h2 {
+.info-cards__info {
     font-size: 0.5em;
     padding: 1em;
     margin: 0;
-    
 }
 
+.info-cards__header {
+    font-size: 0.7em;
+}
 
 /*----footer styling----*/
 
@@ -237,35 +241,271 @@ footer {
     margin-top: 2em;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    
 }
 
-.footer-logo__img {
-    max-width: 9em;
-    margin: 1.2em auto;
-}
-
-.info, .terms, .resorts {
+.footerinfo {
     border-bottom: 2px solid black;
     padding-bottom: 1em;
 }
 
-.info__list, .terms__list, .resorts__list {
+.footerinfo__header {
+    font-size: 1em;
+}
+
+.footerinfo__list {
     margin: 0;
     padding: 0;
     font-size: 0.9em;
 } 
 
-/*----styling för datorskärmar----*/
+.footerlogo__img {
+    max-width: 9em;
+    margin: 1.2em auto;
+}
+
+/*----BOOKING STYLING-----*/
+
+/* ----booking header styling---*/
+
+.booking-header {
+    background-image: none;
+}
+
+.booking-header .hamitems__item {
+    color: var(--lightgreen);
+}
+
+.booking-header .hamnav__label {
+    color: var(--lightgreen);
+}
+
+/* ----booking avalibility-form styling----*/
+
+.avalibility-form-booking {
+    margin-top: 1em;
+}
+
+.avalibility-form-booking .checkitems {
+    display: block;
+    background-color: var(--backgroundblacktrans);
+    padding: 0;
+}
+
+.avalibility-form-booking .avalibility-form--button {
+    display: none;
+}
+
+.avalibility-form-booking .avalibility-form--btn {
+    display: none;
+}
+    
+/* ----booking main styling----*/
+
+.booking-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.available-rooms {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.available-rooms__card {
+    background-color: white;
+    border-radius: 5px;
+    max-width: 11em;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(255, 255, 255, 0.22) 0px 15px 12px;
+}
+
+
+.available-rooms__slider-wrapper {
+    position: relative;
+}
+
+.available-rooms__slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+.available-rooms__image {
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.available-rooms__slider-nav {
+    display: flex;
+    column-gap: 1em;
+    position: absolute;
+    bottom: 0.2em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.available-rooms__navbtn {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 0.2s;
+}
+
+.available-rooms__navbtn:hover {
+    opacity: 1;
+}
+
+.avalible-rooms__smallimg{
+    display: none;
+}
+
+.smallimg {
+    max-width: 4.5em;
+    margin-bottom: 0.8em;
+}
+
+.avalible-rooms__info {
+    font-size: 0.5em;
+}
+.available-rooms__card h3 {
+    font-size: 0.7em;
+}
+
+.availible-rooms__button {
+    background-color: var(--buttonyellow);
+    border: none;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 1em 2em;
+    margin-bottom: 2em;
+    cursor: pointer;
+    transition-duration: 2s;
+}
+
+.availible-rooms__button:hover {
+    background-color: var(--green);
+}    
+
+/*----CHECK-OUT STYLING----*/
+/*----check-out main styling----*/
+
+.check-out-main{
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.your-details {
+    font-size: 0.6em;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--backgroundblacktrans);
+    width: 96%;
+    margin: 1em;
+    padding-top: 2em;
+    grid-area: your-details;
+    place-self: center;
+    text-align: center;
+}
+
+.your-details__header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.your-details__list{
+    margin-top: 3em;
+    margin-bottom: 1em;
+    text-align: left;
+    line-height: 2em;
+}
+
+.customerinfo {
+    grid-area: customerinfo;
+    place-self: center;
+    background-color: white;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 14em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 5px;
+    box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px, rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(255, 255, 255, 0.07) 0px 4px 8px, rgba(255, 255, 255, 0.07) 0px 8px 16px, rgba(255, 255, 255, 0.07) 0px 16px 32px, rgba(255, 255, 255, 0.07) 0px 32px 64px;
+}
+
+.customerinfo__input {
+    min-width: 60%;
+    align-self: center;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+.customerinfo ::placeholder {
+    color: black;
+    text-align: center;
+    opacity: 80%;
+    font-size: 1.3em;
+}
+
+.customerinfo__button {
+    background-color: var(--buttonyellow);
+    border: none;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 2em 4em;
+    margin: 2em;
+    align-self: center;
+    cursor: pointer;
+    transition-duration: 2s;
+}
+
+.availible-rooms__button:hover {
+    background-color: var(--green);
+} 
+.check-outimg {
+    grid-area: check-outimg;
+    place-self: center;
+    max-width: 100%;
+    margin: 1em;
+}
+
+.check-outimg__img {
+    max-width: 100%;
+    margin-top: 1em;
+    box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px, rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(255, 255, 255, 0.07) 0px 4px 8px, rgba(255, 255, 255, 0.07) 0px 8px 16px, rgba(255, 255, 255, 0.07) 0px 16px 32px, rgba(255, 255, 255, 0.07) 0px 32px 64px;
+}
+
+/*----ABOUT US STYLING----*/
+
+.aboutus-header {
+    margin-top: 0.5em;
+}
+
+/*----styling för större skärmar----*/
 
 @media screen and (min-width: 700px) {
 
-    /*----headerstyling----*/
 
     body {
         font-size: 2.5rem;
+        max-width: 100vw;
     }
 
+    /*---- MAIN STYLING (Index)----*/
+    /*---- header styling----*/
     .hamnav__label {
         display: none;
     }
@@ -274,8 +514,7 @@ footer {
         display: flex;
         justify-content: flex-end;
         flex-wrap: wrap;
-       
-    }
+       }
     
     .hamitems__item {
       border: none;
@@ -297,14 +536,11 @@ footer {
         margin-bottom: 15em;
     }
 
-    /* ----main avalibility-form styling----*/
+    /* ---- index avalibility-form styling----*/
 
-    
     .checkitems {
         display: block;
-        width: 90%;
     }
-    
     
     .avalibility-form {
         margin-top: -6em;
@@ -314,7 +550,6 @@ footer {
         color: white;
         display: flex;
         align-items: center;
-        
     }
     
     .avalibility-form--button {
@@ -343,26 +578,117 @@ footer {
     }
 
     .info-cards {
+        
         flex-direction: row;
         flex-wrap: wrap;
     }
 
+    .info-cards__card {
+        margin: 0.5em;
+    }
     /*----footer styling----*/
 
-   footer {
+    footer {
     grid-template-columns: repeat(4, 1fr);
     padding: 1em;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    }
 
-   }
-
-
-   .info, .terms, .resorts, .footer-logo {
+    .footerinfo, .footer-logo {
     border: none;
-    
     max-width: 8em;
-   }
+    }
+
+    /* ---- booking header styling---*/
+
+    .booking-header {
+        margin-right: 20%;
+    }
+
+    .booking-header .hamitems__item {
+        border-right: 2px solid var(--lightgreen);
+    }
+
+    .booking-header .hamitems__item--noborder {
+        border: none;
+    }
+
+    /*---booking main styling */
+
+    .avalibility-form-booking {
+        margin-top: 1em;
+        margin-left: 4em;
+        margin-right: 4em;
+        justify-self: center;
+        width: 80%;
+    }
+
+    .available-rooms__card {
+        max-width: 15em;
+    }
+
+    .avalible-rooms__smallimg {
+        display: inline-block;
+    }
+
+    .availible-rooms__button {
+        padding: 3em 5em;
+        margin-bottom: 3em;
+    }
+
+    /*----CHECK-OUT STYLING----*/
+    /*----check-out main styling----*/
+
+    .check-out-main{
+        max-width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "your-details your-details your-details your-details"
+        "customerinfo customerinfo check-outimg check-outimg";
+    }
+
+        .your-details {
+        font-size: 1em;
+    }
+
+    .customerinfo {
+        grid-area: customerinfo;
+        place-self: center;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(5px, 1fr));
+    }
+    
+    .customerinfo__input {
+        align-self: center;
+        margin: 1em;
+        padding: 1em;
+    }
+
+    .customerinfo__label {
+        display: block;
+        font-size: 0.5em;
+        align-self: center;
+    }
+
+    .customerinfo__button {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        padding: 4em;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
 
