@@ -17,7 +17,7 @@ body {
     font-size: 1.5rem;
     text-align: center;
     width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
     background-image: url(/assets/photos/image\ 3\ 2.png);
     background-repeat: repeat;
     background-color: var(--dark);
@@ -61,10 +61,9 @@ header {
 
 .hamitems {
     display: none;
-    margin-right: 15%;
-        margin-left: 6em;
-        margin-top: 0;
-        padding-top: 0.5em;
+    margin-top: 0;
+    padding-top: 0.5em;
+    padding: 0;
 }
 
 .hamitems__item {
@@ -137,8 +136,10 @@ header {
 .checkitems {
     display: none;
     background-color: var(--backgroundblacktrans);
-    width: 95%;
     padding: 0;
+    min-width: 12em;
+    width: 95%;
+    max-width: 34.5em;
 }
 
 .check, .adult, .children {
@@ -318,6 +319,8 @@ footer {
     border-radius: 5px;
     max-width: 11em;
     box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(255, 255, 255, 0.22) 0px 15px 12px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -514,6 +517,9 @@ footer {
         display: flex;
         justify-content: flex-end;
         flex-wrap: wrap;
+        margin-left: 7em;
+        margin-right: 15%;
+        padding-top: 0.8em;
        }
     
     .hamitems__item {
@@ -627,6 +633,7 @@ footer {
 
     .available-rooms__card {
         max-width: 15em;
+        margin: 0.5em;
     }
 
     .avalible-rooms__smallimg {
