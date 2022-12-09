@@ -482,7 +482,8 @@ footer {
     grid-area: check-outimg;
     place-self: center;
     max-width: 100%;
-    margin: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .check-outimg__img {
@@ -649,7 +650,9 @@ footer {
     /*----check-out main styling----*/
 
     .check-out-main{
-        max-width: 100vw;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
@@ -657,8 +660,9 @@ footer {
         "customerinfo customerinfo check-outimg check-outimg";
     }
 
-        .your-details {
+    .your-details {
         font-size: 1em;
+        width: 100%;
     }
 
     .customerinfo {
@@ -685,6 +689,10 @@ footer {
         grid-column-start: 2;
         grid-column-end: 4;
         padding: 4em;
+    }
+
+    .check-outimg {
+        margin-right: 0;
     }
 }
 
